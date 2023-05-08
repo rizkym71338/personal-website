@@ -11,7 +11,7 @@ const { title, description, imagePath, isVertical } = portfolio;
   >
     <div
       :class="`flex-none space-y-3 p-6 ${
-        !isVertical && 'max-w-[180px] sm:max-w-[220px]'
+        !isVertical && 'max-w-[180px] sm:max-w-[250px]'
       }`"
     >
       <h2 class="text-sm font-semibold text-gray-900 sm:text-base">
