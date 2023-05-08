@@ -26,7 +26,7 @@ const { title, description, imagePath, isVertical } = portfolio;
       :alt="title"
       :class="`h-full ${
         isVertical
-          ? 'object-cover object-left'
+          ? 'object-fill object-left'
           : 'max-h-[299px] md:max-h-[421px] lg:max-h-full'
       }`"
     />
