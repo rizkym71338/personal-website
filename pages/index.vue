@@ -1,4 +1,11 @@
 <script setup>
+
+useHead({
+  script: [
+    { src: "https://identity.netlify.com/v1/netlify-identity-widget.js" },
+  ],
+});
+
 const portfolios = [
   {
     title: "Hear I Am",
@@ -43,6 +50,11 @@ const portfolios = [
     isVertical: true,
   },
 ];
+const getData = async () => {
+  const articles = await queryContent('blog').find()
+  console.log(articles)
+}
+getData()
 </script>
 
 <template>

@@ -19,4 +19,10 @@ export default defineNuxtConfig({
   plugins: [
     { src: '~/plugins/aos', mode: 'client' },
   ],
+  modules: [
+    '@nuxt/content'
+  ],
+  content: {
+    // Options
+  }
 });
