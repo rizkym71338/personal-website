@@ -16,4 +16,7 @@ export default defineNuxtConfig({
       link: [{ rel: "icon", type: "image/png", href: "/favicon.png" }],
     },
   },
+  plugins: [
+    { src: '~/plugins/aos', mode: 'client' },
+  ],
 });

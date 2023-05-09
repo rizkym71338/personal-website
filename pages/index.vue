@@ -75,7 +75,7 @@ const portfolios = [
       </div>
     </div>
     <div class="grid w-full grid-cols-12 gap-6">
-      <div
+      <div data-aos="fade-up"
         v-for="portfolio in portfolios"
         :class="`col-span-12 flex ${
           portfolio.isVertical
