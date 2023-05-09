@@ -21,3 +21,4 @@ collections:
       - { label: 'Main Image', name: 'mainimage', widget: 'image' }
       - { label: 'Complete Description', name: 'longdescription', widget: 'string' }
       - { label: 'Company Name', name: 'company', widget: 'string' }
+      - { label: 'Location', name: 'location', widget: 'string' }
