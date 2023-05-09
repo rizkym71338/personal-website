@@ -17,6 +17,7 @@ collections:
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: "Featured Image", name: "thumbnail", widget: "image" }
-      - { label: 'Description', name: 'description', widget: 'string' }
-      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { label: 'Short Description', name: 'shortdescription', widget: 'string' }
+      - { label: 'Main Image', name: 'mainimage', widget: 'image' }
+      - { label: 'Complete Description', name: 'longdescription', widget: 'string' }
+      - { label: 'Company Name', name: 'company', widget: 'string' }
