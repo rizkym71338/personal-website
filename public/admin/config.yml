@@ -22,3 +22,4 @@ collections:
       - { label: 'Complete Description', name: 'longdescription', widget: 'string' }
       - { label: 'Company Name', name: 'company', widget: 'string' }
       - { label: 'Location', name: 'location', widget: 'string' }
+      - { label: 'Date', name: 'date', widget: 'date' }

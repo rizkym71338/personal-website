@@ -51,7 +51,7 @@ const portfolios = [
   },
 ];
 const getData = async () => {
-  const articles = await queryContent('portofolio').only(['title', 'thumbnail', 'shortdescription', 'mainimage', 'longdescription', 'company', 'location']).sort().find()
+  const articles = await queryContent('portofolio').only(['title', 'thumbnail', 'shortdescription', 'mainimage', 'longdescription', 'company', 'location', 'date']).find()
   console.log(articles)
 }
 getData()
