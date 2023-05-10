@@ -9,4 +9,5 @@ longdescription: Booking a massage has never been easier, and with the variety
   relaxation, and book your next massage session today!
 company: GB Software Asia
 location: Hong Kong
+date: 2023-05-02T06:15:24.946Z
 ---
