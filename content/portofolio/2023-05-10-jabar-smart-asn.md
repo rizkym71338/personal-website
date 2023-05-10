@@ -10,4 +10,5 @@ longdescription: A Super App is a software application that offers a wide range
   from a single platform, reducing the need for multiple logins and systems.
 company: Jawa Barat Government
 location: Bandung, Indonesia
+date: 2023-05-03T06:15:45.570Z
 ---
