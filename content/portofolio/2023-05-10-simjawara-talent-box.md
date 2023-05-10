@@ -8,4 +8,5 @@ longdescription: Accessing employee information for future reference is crucial
   Provincial Government.
 company: Jawa Barat Government
 location: Bandung, Indonesia
+date: 2023-05-01T06:14:56.139Z
 ---
