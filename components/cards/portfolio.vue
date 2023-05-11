@@ -83,7 +83,7 @@ const {
             leave-from="opacity-100 scale-100"
             leave-to="opacity-0 scale-95"
           >
-            <DialogPanel>
+            <DialogPanel class="py-8">
               <button
                 @click="closeModal"
                 class="mb-4 ml-auto mr-2 flex w-fit items-center justify-center rounded-full bg-white p-2 outline-none"
