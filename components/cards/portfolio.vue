@@ -73,7 +73,7 @@ const {
       </TransitionChild>
 
       <div class="fixed inset-0 overflow-y-auto">
-        <div class="flex h-full flex-col items-center justify-center p-4">
+        <div class="flex min-h-full flex-col items-center justify-center p-4">
           <TransitionChild
             as="template"
             enter="duration-300 ease-out"
@@ -83,7 +83,7 @@ const {
             leave-from="opacity-100 scale-100"
             leave-to="opacity-0 scale-95"
           >
-            <DialogPanel class="py-8">
+            <DialogPanel>
               <button
                 @click="closeModal"
                 class="mb-4 ml-auto mr-2 flex w-fit items-center justify-center rounded-full bg-white p-2 outline-none"
