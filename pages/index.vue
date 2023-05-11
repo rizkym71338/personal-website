@@ -1,60 +1,24 @@
 <script setup>
-
 useHead({
   script: [
     { src: "https://identity.netlify.com/v1/netlify-identity-widget.js" },
   ],
 });
 
-const portfolios = [
-  {
-    title: "Hear I Am",
-    description:
-      "Online service platform to connect patients to music therapists across Asia.",
-    imagePath: "/img/hear-i-am.png",
-    isVertical: false,
-  },
-  {
-    title: "eKinerja",
-    description:
-      "Recording, monitoring, and evaluating employee performance in real-time.",
-    imagePath: "/img/e-kinerja.png",
-    isVertical: true,
-  },
-  {
-    title: "Smart ASN Web Portal",
-    description:
-      "Web portal that provides access to an digital administration services.",
-    imagePath: "/img/smart-asn-web-portal.png",
-    isVertical: true,
-  },
-  {
-    title: "Jabar Smart ASN",
-    description:
-      "A Super App that makes it easy for employees to use digital administration services in one place.",
-    imagePath: "/img/jabar-smart-asn.png",
-    isVertical: false,
-  },
-  {
-    title: "So Thai Massage",
-    description:
-      "Relaxation at your fingertips! Book your next massage with ease.",
-    imagePath: "/img/so-thai-massage.png",
-    isVertical: false,
-  },
-  {
-    title: "SIMJAWARA: Talent Box",
-    description:
-      "Employee information for future in West Java Provincial Government.",
-    imagePath: "/img/simjawara.png",
-    isVertical: true,
-  },
-];
-const getData = async () => {
-  const articles = await queryContent('portofolio').only(['title', 'thumbnail', 'shortdescription', 'mainimage', 'longdescription', 'company', 'location', 'date']).find()
-  console.log(articles)
-}
-getData()
+const { data } = await useAsyncData(() =>
+  queryContent("portofolio")
+    .only([
+      "title",
+      "thumbnail",
+      "shortdescription",
+      "mainimage",
+      "longdescription",
+      "company",
+      "location",
+      "date",
+    ])
+    .find()
+);
 </script>
 
 <template>
@@ -87,15 +51,16 @@ getData()
       </div>
     </div>
     <div class="grid w-full grid-cols-12 gap-6">
-      <div data-aos="fade-up"
-        v-for="portfolio in portfolios"
+      <div
+        data-aos="fade-up"
+        v-for="(portfolio, index) in sortNewest(data)"
         :class="`col-span-12 flex ${
-          portfolio.isVertical
+          isVertical(index)
             ? 'aspect-square lg:col-span-5'
             : 'lg:col-span-7 lg:aspect-[12/8.5]'
         }`"
       >
-        <CardsPortfolio :portfolio="portfolio" />
+        <CardsPortfolio :portfolio="portfolio" :index="index" />
       </div>
     </div>
   </section>

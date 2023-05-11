@@ -6,20 +6,34 @@ media_folder: public/img
 public_folder: /img
 
 collections:
-  - name: 'portofolio'
-    label: 'Portofolio'
-    folder: 'content/portofolio'
-    format: 'frontmatter'
+  - name: "portofolio"
+    label: "Portofolio"
+    folder: "content/portofolio"
+    format: "frontmatter"
     create: true
-    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     editor:
       preview: false
     fields:
-      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: "Title", name: "title", widget: "string" }
       - { label: "Featured Image", name: "thumbnail", widget: "image" }
-      - { label: 'Short Description', name: 'shortdescription', widget: 'string' }
-      - { label: 'Main Image', name: 'mainimage', widget: 'image' }
-      - { label: 'Complete Description', name: 'longdescription', widget: 'string' }
-      - { label: 'Company Name', name: 'company', widget: 'string' }
-      - { label: 'Location', name: 'location', widget: 'string' }
-      - { label: 'Date', name: 'date', widget: 'date' }
+      - {
+          label: "Short Description",
+          name: "shortdescription",
+          widget: "string",
+        }
+      - { label: "Main Image", name: "mainimage", widget: "image" }
+      - {
+          label: "Complete Description",
+          name: "longdescription",
+          widget: "string",
+        }
+      - { label: "Company Name", name: "company", widget: "string" }
+      - { label: "Location", name: "location", widget: "string" }
+      - { label: "Date", name: "date", widget: "date" }
+      - {
+          label: "Vertical",
+          name: "vertical",
+          widget: "boolean",
+          default: true,
+        }
