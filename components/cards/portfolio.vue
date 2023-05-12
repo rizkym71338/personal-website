@@ -27,6 +27,12 @@ const {
   location,
   date,
 } = portfolio;
+
+const contents = [
+  { title: "Description", body: longdescription },
+  { title: "Company", body: company },
+  { title: "Location", body: location },
+];
 </script>
 
 <template>
@@ -91,45 +97,30 @@ const {
                 <IconsClose class="aspect-square w-6 text-gray-900" />
               </button>
               <div
-                class="flex w-full max-w-4xl flex-col gap-6 rounded-[32px] bg-white p-6 sm:flex-row"
+                class="flex w-full max-w-4xl flex-col gap-6 rounded-[32px] bg-white p-6 duration-300 sm:flex-row"
               >
-                <img
-                  :src="mainimage"
-                  :alt="title"
-                  class="h-fit w-full rounded-3xl object-cover sm:max-w-sm md:max-w-[480px]"
-                />
+                <div
+                  class="relative aspect-[4/3] h-fit w-full flex-none overflow-hidden rounded-3xl duration-300 sm:max-w-sm md:max-w-[480px]"
+                >
+                  <img
+                    :src="mainimage"
+                    :alt="title"
+                    class="h-full w-full object-cover"
+                  />
+                </div>
                 <div class="flex flex-col space-y-6">
                   <h1 class="block text-2xl font-bold text-gray-900">
                     {{ title }}
                   </h1>
-                  <div class="flex flex-col space-y-2">
-                    <p
-                      class="block text-xs font-semibold text-gray-900 sm:text-sm"
-                    >
-                      Description
+                  <div
+                    v-for="{ title, body } in contents"
+                    class="flex flex-col space-y-2"
+                  >
+                    <p class="text-xs font-semibold text-gray-900 md:text-sm">
+                      {{ title }}
                     </p>
-                    <p class="text-xs text-gray-500 sm:text-sm">
-                      {{ longdescription }}
-                    </p>
-                  </div>
-                  <div class="flex flex-col space-y-2">
-                    <p
-                      class="block text-xs font-semibold text-gray-900 sm:text-sm"
-                    >
-                      Company
-                    </p>
-                    <p class="text-xs text-gray-500 sm:text-sm">
-                      {{ company }}
-                    </p>
-                  </div>
-                  <div class="flex flex-col space-y-2">
-                    <p
-                      class="block text-xs font-semibold text-gray-900 sm:text-sm"
-                    >
-                      Location
-                    </p>
-                    <p class="text-xs text-gray-500 sm:text-sm">
-                      {{ location }}
+                    <p class="text-xs text-gray-500 md:text-sm">
+                      {{ body }}
                     </p>
                   </div>
                 </div>
